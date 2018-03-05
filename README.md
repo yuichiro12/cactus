@@ -18,4 +18,4 @@ go run main.go
 ```
 
 ## recommendation
-With your own bgm, it will be nicer.
+With your own bgm, it would be nicer.
