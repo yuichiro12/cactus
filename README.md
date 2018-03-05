@@ -7,8 +7,13 @@ An instant [hckrnews](https://hckrnews.com) radio.
 - To read text, `say` command is required.
 
 ## usage
-```sh
-go run main.go | say
+```
+git clone https://github.com/yuichiro12/cactus.git
+```
+```
+cd cactus
+```
+go run main.go
 ```
 
 ## recommendation
