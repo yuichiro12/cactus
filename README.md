@@ -3,7 +3,7 @@
 An instant [hckrnews](https://hckrnews.com) radio.
 
 ## requirement
-- [Goquery](https://github.com/PuerkitoBio/goquery) is required for get articles.
+- [Goquery](https://github.com/PuerkitoBio/goquery) is required for getting articles.
 - To read text, `say` command is required.
 
 ## usage
