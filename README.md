@@ -11,7 +11,7 @@ An instant [hckrnews](https://hckrnews.com) radio.
 git clone https://github.com/yuichiro12/cactus.git
 ```
 ```
-cd cactus
+cd cactus/
 ```
 ```
 go run main.go
