@@ -10,3 +10,6 @@ An instant [hckrnews](https://hckrnews.com) radio.
 ```sh
 go run main.go | say
 ```
+
+## recommendation
+Play with your own bgm and it's nicer.
