@@ -12,4 +12,4 @@ go run main.go | say
 ```
 
 ## recommendation
-Play with your own bgm and it's nicer.
+With your own bgm, it will be nicer.
