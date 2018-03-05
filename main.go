@@ -3,18 +3,38 @@ package main
 import (
 	"fmt"
 	"log"
+	"time"
 
 	"github.com/PuerkitoBio/goquery"
 )
 
 func main() {
-	doc, err := goquery.NewDocument("https://www.nytimes.com/2018/03/04/technology/silicon-valley-midwest.html?rref=collection%2Fsectioncollection%2Ftechnology&action=click&contentCollection=technology&region=stream&module=stream_unit&version=latest&contentPlacement=4&pgtype=sectionfront")
+	doc, err := goquery.NewDocument("https://hckrnews.com")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Printf("%s --\n", doc.Find("#headline").Text())
-	doc.Find(".story-body-text").Each(func(i int, s *goquery.Selection) {
+	doc.Find("a.link").EachWithBreak(func(i int, s *goquery.Selection) bool {
+		if i > 10 {
+			return false
+		}
+		link, exists := s.Attr("href")
+		if exists {
+			readArticle(link)
+		}
+		time.Sleep(3 * time.Second)
+		return true
+	})
+}
+
+func readArticle(link string) {
+	doc, err := goquery.NewDocument(link)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Printf("%s --\n", doc.Find("h1").Text())
+	doc.Find("p").Each(func(i int, s *goquery.Selection) {
 		fmt.Printf("%s\n", s.Text())
 	})
 }
