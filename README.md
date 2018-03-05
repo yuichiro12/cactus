@@ -1,6 +1,6 @@
 # cactus
 
-An instant hckernews radio.
+An instant [hckrnews](https://hckrnews.com) radio.
 
 ## requirement
 - [Goquery](https://github.com/PuerkitoBio/goquery) is required for get articles.
